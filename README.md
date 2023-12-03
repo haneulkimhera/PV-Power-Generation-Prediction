@@ -1,9 +1,11 @@
 # PV-Power-Generation-Prediction
-Built deep learning models to predict the amount of photovoltaic power generation for each generator
+Built Machine learning models to predict the amount of photovoltaic power generation for each generator
 
 ## 1. Topic description
 + The Korean government has announced a plan to increase the proportion of renewable energy, especially focusing on photovoltaic solar power.
-+ Variability of solar power makes the prediction difficult, which is crucial to achieving the goal.
++ ![image](https://github.com/haneulkimhera/PV-Power-Generation-Prediction/assets/105425832/12fea880-309a-4569-9d65-8b32d5d68be4)
++ Non linearity of solar power makes the prediction difficult, which is crucial to achieving the goal.
++ ![image](https://github.com/haneulkimhera/PV-Power-Generation-Prediction/assets/105425832/a527bef5-86a9-461c-8748-438954e1646d)
 + 1st goal: Identifying the climate factors that have a significant impact, specific to each power plant
 + 2nd goal: Analyzing the relationship between climate factors & solar power generation / each climate factors
 + 3rd goal: Proposing optimal conditions to maximize solar power generation, specialized for each power plant
@@ -32,7 +34,10 @@ Built deep learning models to predict the amount of photovoltaic power generatio
 
 ### 3) Merge Climate Data
 #### 3.1 Merge Climate Data into PV Generation Data
-+ Create a 'region' column in PV generation using the get_region() method, to map the climate data of a region to the corresponding region. 
++ Create a 'region' column in PV generation using the get_region() method, to map the climate data of a region to the corresponding region.
++ Merge climate data with PV generation data to the corresponding region and date, using the ‘region’ & ‘date’ columns.
+
+### 4) Merge Climate Data
 
 
 
