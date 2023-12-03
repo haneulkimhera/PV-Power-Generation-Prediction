@@ -36,12 +36,14 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 + Merge climate data with PV generation data to the corresponding region and date, using the ‘region’ & ‘date’ columns.
 
 ### 4) Disunite for Each Power Plant
-+ Disunite the dataset into 9 individual datasets for each solar power plants to consider specific characteristics on each power plant.
-+ There are several generators in each power plant.
++ Disunite the dataset into 9 individual datasets for each solar power plant to consider the specific characteristics of each power plant. There are several generators in each power plant.
++ To integrate the several units in Samcheonpo and Yeongheung power plants into one value, we calculated the weighted average value based on each unit’s capacity at each time and then summed up these values. So, we could get one generation amount value in each time.
 
 ### 5) Handle Missing Values
 #### 5.1 Drop features with high null percentage
 + Remove columns if a column has a proportion of null values of 40% or more. After removing columns, we interpolated the remaining null values using Linear Interpolation method.
+#### 5.2 Interpolate null values
++ We use Linear Interpolation Method
 
 
 
