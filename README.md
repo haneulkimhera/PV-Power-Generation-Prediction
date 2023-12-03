@@ -46,6 +46,15 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 + We use Linear Interpolation Method
 
 
+## 4. Feature Engineering
+  1) Extract the month, day, and hour information from the data to generate new features.
+  2) To compensate for the inability to well represent cyclicity in a 1D linear representation, we use a circular coordinate system.
+  3) Each unit (month, day, hour) is mapped onto a circle, preserving its cyclicity. This is done by multiplying the unit by the ratio of 2π to the maximum value of the unit, and then taking the sine and cosine of the result.
+  4) Through this process, new features named 'month_x', 'month_y', 'day_x', 'day_y', 'hour_x', 'hour_y' are created. These represent the sine and cosine values of the month, day, and hour.
+  5) With these generated features, the machine learning model can understand the cyclical nature of time, enabling it to make more accurate predictions.
+
+
+
 
 
 
