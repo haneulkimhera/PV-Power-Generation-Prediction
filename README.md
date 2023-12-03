@@ -55,29 +55,92 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 
 
 ## 5. Make Model
-### 5.1 Random Forest Regression
+### 1) Random Forest Regression
 + Random Forest regression is an ensemble technique performing both regression and classification with the use of multiple decision trees.
 + The model is used to predict the amount of PV power generation, which has a large variation, using Climate and PV performance data set.
-### 5.2 XGBoost Regression
-+ XGBoost regression is the implementation of gradient boosting for regression predictive modeling and has very good prediction.
+### 2) XGBoost Regression
++ XGBoost regression is the implementation of gradient boosting for regression predictive modeling and has a very good prediction.
 + The model is used to predict the amount of PV power generation, which has a large variation, using Climate and PV performance data set.
-### 5.3 LightGBM Regression
+### 3) LightGBM Regression
 + Light GBM is a gradient-boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training and is particularly useful for large datasets.
 + The model is employed to predict the amount of PV power generation using Climate and PV performance datasets.
-### 5.4 CatBoost Regression
+### 4) CatBoost Regression
 + CatBoost is another gradient-boosting algorithm designed to handle categorical features seamlessly.
 + The model is utilized to predict the amount of PV power generation based on the Climate and PV performance datasets.
 
 
 ## 6. Evaluation
+### Model Comparision
++ We modeled all nine power plants using four different regression models.
++ As a result, a model with the largest R2 score and no negative power generation was predicted was selected.
+### Model Selection Result
+#### 1) Samcheonpo
++ Random Forest Regression has largest R2 score and no negative power generation
+#### 2) Yeongheung
++ Random Forest Regression has largest R2 score and no negative power generation
+#### 3) Yeongdong
++ Random Forest Regression has largest R2 score and no negative power generation
+#### 4) Gumi
++ LGBM Regression has largest R2 score, but a small negative prediction value of power generation appears in the prediction
++ So we selected Random Forest Regression
+#### 5) Gwangyanghang
++ LGBM Regression has largest R2 score and no negative power generation
+#### 6) Dusan
++ Random Forest Regression has largest R2 score and no negative power generation
+#### 7) Gyeongsang University
++ CatBoost Regression and LGBM Regression have larger R2 score than Random Forest Regression, but they have a small negative power generation prediction value appears
++ So we selected Random Forest Regression
+#### 8) Yecheon
++ Random Forest Regression has largest R2 score and no negative power generation
+#### 9) Goheungman
++ CatBoost Regression has largest R2 score and no negative power generation
 
 
+## 7. SHAP value Analysis
+### 1. Modeling
+#### 1) Select the generator and algorithm that we want to analyze.
+#### 2) Load the dataset
+#### 3) Set variable X and target Y
+#### 4) Split the dataset into train set and test set
+#### 5) Do the feature scaling
+#### 6) Train with selected model and algorithm
+#### 7) Evaluate the train model
+
+### 2. SHAP value Analysis
+#### 1) Calculate SHAP values for each feature
+#### 2) Draw a Summary Plot & Bar Plot
+#### 3) Draw a Dependency Plot
+
+### 3. SHAP value summarization
++ Extract factors with positive and negative impact on output with Summary Plot
+
+### 4. Meaningful Discoveries from the model (Insight)
++ Extract meaningful findings from Discovery Plot
 
 
+## 8. Conclusion
+### 1) General Discoveries
++ In contrast to common belief, PV power generation doesn't always linearly increase as temperature increases.
++ Most of climate factors show non-linear relationship with the PV generation.
++ Influence of insolation itself turned out to increases as it increases as expected, however, for other factors, there is a certain point where the influence of the factors become lower with the higher insolation. That is, it is essential to consider multiple factors together to properly predict PV generation.
++ Even for the same climate factor, the magnitude of influence or the values of the factor having high influence varies from different power station.
 
+### 2) Power Station Specific Discoveries
++ **Dusan**: The power generation will be high when the temperature range is between 5 and 15 degrees, the humidity is below 50, the insolation is 1.5 or higher, the air pressure is 1005hpa or higher, and the cloud range is between 0 and 5. 
++ **Gwangyanghang**: The power generation will be high when the temperature range is between -5 and -15 degrees, the air pressure is below 990 or between 1000 and 1010, the insolation is 1.5 or higher, the ground temperature is 25 or higher, and the cloud range is between 0 and 5.
++ **Yeongheung**: The power generation will be high when the temperature range is between -5 and 15 degrees, the humidity is below 60, the insolation is 1.3 or higher, the ground temperature is 25 or higher, and the cloud range is between 0 and 5.
++ **Yecheon**: The power generation will be high when the temperature range is between 0 and 25 degrees, the humidity is below 50, the ground temperature range is between 25 and 35, the air pressure is 995 or higher, and the sunshine is 0.8 or higher. 
++ **Goheungman**: The power generation will be high when the temperature range is between 17 and 27 degrees, the ground temperature is between 25 and 35, the cloud range is between 0 and 5, and the air pressure is between 1007 and 1010.
++ **Yeongdong**: The power generation will be high when the temperature range is less than 0, the humidity is less than 60, the insolation is greater than 1.5, the cloud range is between 0 and 5, and the air pressure is greater than 990.
++ **Samcheonpo**: The power generation will be high when the temperature range is 30, the humidity is less than 60, the ground temperature is between 30 and 40, the sunshine is between 0.6 and 1, and the cloud is between 0 and 5.
++ **Gyeongsang University**: the power generation will be high when the temperature range is between 0 and 10 degrees, the humidity is between 30 and 40, the insolation value is greater than 1.5, and the cloud is between 0 and 5.
++ **Gumi**: The power generation will be high when the temperature range is between –10 and 5, the humidity is less than 30, the ground temperature is between 30 and 40, sunshine is greater than 0.7, and the cloud range is between 0 and 5.
 
-
-
+### 3) Sum up
++ Solar power generation efficiency varies significantly across different regions due to distinct environmental conditions. Contrary to the common belief that higher temperatures always lead to increased solar power output, our analysis shows this isn't universally true.
++ Encoding time series data using Fourier features helps machine learning models grasp the continuity of time rather than focusing on gaps between time values.
++ Utilizing SHAP (SHapley Additive exPlanations) allows us to understand the impact of each input variable on the model's solar power generation predictions.
++ One limitation of our project was the relatively small dataset (from January 2022 to October 2023) obtained from Korea South-East Power. Future research could benefit from a larger dataset, potentially leading to more accurate models.
 
 
 
