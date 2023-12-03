@@ -55,21 +55,21 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 
 
 ## 5. Make Model
-### 2.1 Random Forest Regression
+### 5.1 Random Forest Regression
 + Random Forest regression is an ensemble technique performing both regression and classification with the use of multiple decision trees.
 + The model is used to predict the amount of PV power generation, which has a large variation, using Climate and PV performance data set.
-### 2.2 XGBoost Regression
+### 5.2 XGBoost Regression
 + XGBoost regression is the implementation of gradient boosting for regression predictive modeling and has very good prediction.
 + The model is used to predict the amount of PV power generation, which has a large variation, using Climate and PV performance data set.
-### 2.3 LightGBM Regression
+### 5.3 LightGBM Regression
 + Light GBM is a gradient-boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training and is particularly useful for large datasets.
 + The model is employed to predict the amount of PV power generation using Climate and PV performance datasets.
-### 2.4 CatBoost Regression
+### 5.4 CatBoost Regression
 + CatBoost is another gradient-boosting algorithm designed to handle categorical features seamlessly.
 + The model is utilized to predict the amount of PV power generation based on the Climate and PV performance datasets.
 
 
-
+## 6. Evaluation
 
 
 
