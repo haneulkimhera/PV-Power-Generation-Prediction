@@ -139,7 +139,7 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 ### 3) Sum up
 + Solar power generation efficiency varies significantly across different regions due to distinct environmental conditions. Contrary to the common belief that higher temperatures always lead to increased solar power output, our analysis shows this isn't universally true.
 + Encoding time series data using Fourier features helps machine learning models grasp the continuity of time rather than focusing on gaps between time values.
-+ Utilizing SHAP (SHapley Additive exPlanations) allows us to understand the impact of each input variable on the model's solar power generation predictions.
++ Utilizing SHAP (Shapley Additive exPlanations) allows us to understand the impact of each input variable on the model's solar power generation predictions.
 + One limitation of our project was the relatively small dataset (from January 2022 to October 2023) obtained from Korea South-East Power. Future research could benefit from a larger dataset, potentially leading to more accurate models.
 
 
