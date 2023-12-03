@@ -54,7 +54,7 @@ Built Machine learning models to predict the amount of photovoltaic power genera
   5) With these generated features, the machine learning model can understand the cyclical nature of time, enabling it to make more accurate predictions.
 
 
-## 5. Candidate Models
+## 5. Candidates for Machine Learning Model
 ### 1) Random Forest Regression
 + Random Forest regression is an ensemble technique performing both regression and classification with the use of multiple decision trees.
 + The model is used to predict the amount of PV power generation, which has a large variation, using Climate and PV performance data set.
@@ -69,31 +69,31 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 + The model is utilized to predict the amount of PV power generation based on the Climate and PV performance datasets.
 
 
-## 6. Model Selection for each power station
+## 6. Model Selection for Each Power Station
 ### Model Comparision
-+ We modeled all nine power plants using four different regression models.
-+ As a result, a model with the largest R2 score and no negative power generation was predicted was selected.
++ We built 4 diffrent regression models for all nine power plants, and compared those 4 models.
++ As a result, a model with the largest R2 score and no negative prediction was selected.
 ### Model Selection Result
 #### 1) Samcheonpo
-+ Random Forest Regression has largest R2 score and no negative power generation
++ Random Forest Regression has largest R2 score and no negative prediction
 #### 2) Yeongheung
-+ Random Forest Regression has largest R2 score and no negative power generation
++ Random Forest Regression has largest R2 score and no negative prediction
 #### 3) Yeongdong
-+ Random Forest Regression has largest R2 score and no negative power generation
++ Random Forest Regression has largest R2 score and no negative prediction
 #### 4) Gumi
 + LGBM Regression has largest R2 score, but a small negative prediction value of power generation appears in the prediction
 + So we selected Random Forest Regression
 #### 5) Gwangyanghang
-+ LGBM Regression has largest R2 score and no negative power generation
++ LGBM Regression has largest R2 score and no negative prediction
 #### 6) Dusan
-+ Random Forest Regression has largest R2 score and no negative power generation
++ Random Forest Regression has largest R2 score and no negative prediction
 #### 7) Gyeongsang University
 + CatBoost Regression and LGBM Regression have larger R2 score than Random Forest Regression, but they have a small negative power generation prediction value appears
 + So we selected Random Forest Regression
 #### 8) Yecheon
-+ Random Forest Regression has largest R2 score and no negative power generation
++ Random Forest Regression has largest R2 score and no negative prediction
 #### 9) Goheungman
-+ CatBoost Regression has largest R2 score and no negative power generation
++ CatBoost Regression has largest R2 score and no negative prediction
 
 
 ## 7. SHAP value Analysis
@@ -112,10 +112,10 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 #### 3) Draw a Dependency Plot
 
 ### 3. SHAP value summarization
-+ Extract factors with positive and negative impact on output with Summary Plot
++ Figure out which factors show clear positive or negative impact on the output, by interpreting summary plot
 
 ### 4. Meaningful Discoveries from the model (Insight)
-+ Extract meaningful findings from Discovery Plot
++ Figure out meaningful findings (such as, unexpected patterns, the optimal range, relationship between different factors), by interpreting dependence plot
 
 
 ## 8. Conclusion
@@ -141,6 +141,20 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 + Encoding time series data using Fourier features helps machine learning models grasp the continuity of time rather than focusing on gaps between time values.
 + Utilizing SHAP (Shapley Additive exPlanations) allows us to understand the impact of each input variable on the model's solar power generation predictions.
 + One limitation of our project was the relatively small dataset (from January 2022 to October 2023) obtained from Korea South-East Power. Future research could benefit from a larger dataset, potentially leading to more accurate models.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
