@@ -35,7 +35,17 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 + Create a 'region' column in PV generation using the get_region() method, to map the climate data of a region to the corresponding region.
 + Merge climate data with PV generation data to the corresponding region and date, using the ‘region’ & ‘date’ columns.
 
-### 4) Merge Climate Data
+### 4) Disunite for Each Power Plant
++ Disunite the dataset into 9 individual datasets for each solar power plants to consider specific characteristics on each power plant.
++ There are several generators in each power plant.
+
+### 5) Handle Missing Values
+#### 5.1 Drop features with high null percentage
++ Remove columns if a column has a proportion of null values of 40% or more. After removing columns, we interpolated the remaining null values using Linear Interpolation method.
+
+
+
+
 
 
 
