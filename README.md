@@ -54,7 +54,7 @@ Built Machine learning models to predict the amount of photovoltaic power genera
   5) With these generated features, the machine learning model can understand the cyclical nature of time, enabling it to make more accurate predictions.
 
 
-## 5. Make Model
+## 5. Candidate Models
 ### 1) Random Forest Regression
 + Random Forest regression is an ensemble technique performing both regression and classification with the use of multiple decision trees.
 + The model is used to predict the amount of PV power generation, which has a large variation, using Climate and PV performance data set.
@@ -69,7 +69,7 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 + The model is utilized to predict the amount of PV power generation based on the Climate and PV performance datasets.
 
 
-## 6. Evaluation
+## 6. Model Selection for each power station
 ### Model Comparision
 + We modeled all nine power plants using four different regression models.
 + As a result, a model with the largest R2 score and no negative power generation was predicted was selected.
@@ -98,12 +98,12 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 
 ## 7. SHAP value Analysis
 ### 1. Modeling
-#### 1) Select the generator and algorithm that we want to analyze.
+#### 1) Select the power plant and model.
 #### 2) Load the dataset
 #### 3) Set variable X and target Y
 #### 4) Split the dataset into train set and test set
 #### 5) Do the feature scaling
-#### 6) Train with selected model and algorithm
+#### 6) Train with selected model
 #### 7) Evaluate the train model
 
 ### 2. SHAP value Analysis
