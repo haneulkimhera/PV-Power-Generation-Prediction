@@ -3,9 +3,7 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 
 ## 1. Topic description
 + The Korean government has announced a plan to increase the proportion of renewable energy, especially focusing on photovoltaic solar power.
-+ ![image](https://github.com/haneulkimhera/PV-Power-Generation-Prediction/assets/105425832/12fea880-309a-4569-9d65-8b32d5d68be4)
-+ Non linearity of solar power makes the prediction difficult, which is crucial to achieving the goal.
-+ ![image](https://github.com/haneulkimhera/PV-Power-Generation-Prediction/assets/105425832/a527bef5-86a9-461c-8748-438954e1646d)
++ Variability of solar power makes the prediction difficult, which is crucial to achieving the goal.
 + 1st goal: Identifying the climate factors that have a significant impact, specific to each power plant
 + 2nd goal: Analyzing the relationship between climate factors & solar power generation / each climate factors
 + 3rd goal: Proposing optimal conditions to maximize solar power generation, specialized for each power plant
