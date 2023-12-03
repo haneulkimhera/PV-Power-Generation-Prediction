@@ -104,7 +104,7 @@ Built Machine learning models to predict the amount of photovoltaic power genera
 #### 4) Split the dataset into train set and test set
 #### 5) Do the feature scaling
 #### 6) Train with selected model
-#### 7) Evaluate the train model
+#### 7) Evaluate the trained model
 
 ### 2. SHAP value Analysis
 #### 1) Calculate SHAP values for each feature
